@@ -207,4 +207,4 @@ Please provide:
 5. Your rate/budget requirements
 
 ## Note
-This project requires expertise in handling sophisticated bot protection systems. Please only apply if you have proven experience in this area.
+This project requires expertise in handling sophisticated bot protection systems. Please only apply if you have proven experience in this area. Thank you!
