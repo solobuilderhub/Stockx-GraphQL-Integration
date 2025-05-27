@@ -1,10 +1,54 @@
 # Job Title: Expert Developer Needed for StockX API Integration with Bot Protection Bypass
 
-[Previous sections remain the same until Technical Details...]
+## Project Overview
+We need an expert developer to create a reliable solution for fetching price data from StockX's GraphQL API while handling their PerimeterX bot protection system. The current implementation is being blocked by PerimeterX's security measures.
+
+## Reference Implementation
+There is an existing commercial implementation available at [CommercialStockXAPI](https://github.com/Sting-Lee/CommercialStockXAPI/) that successfully handles these challenges. The developer should study this implementation as a reference, particularly their approach to:
+- Handling PerimeterX protection
+- Managing authentication tokens
+- Implementing the GraphQL queries
+- Handling session management
+
+The project requires integration with two specific StockX API endpoints:
+
+1. Product Size Ask List API:
+   - Endpoint: `https://stockxapi.dataspiderhub.com/docs#/stockx/i_product_size_ask_list_api_stockx_product_size_ask_list_get`
+   - Purpose: Retrieve ask (sell) prices for specific product sizes
+
+2. Product Size Bid List API:
+   - Endpoint: `https://stockxapi.dataspiderhub.com/docs#/stockx/i_product_size_bid_list_api_stockx_product_size_bid_list_get`
+   - Purpose: Retrieve bid (buy) prices for specific product sizes
+
+These endpoints will be used to fetch real-time pricing data for StockX products, which is the core functionality of this integration.
+
+## Existing Implementation Reference
+A working implementation exists for a related StockX API endpoint:
+- API: Product Search by GTIN
+- Endpoint: `https://stockxapi.dataspiderhub.com/docs#/stockx/i_search_product_by_gtin_api_stockx_search_product_by_gtin_get`
+- Implementation: See `demo.py` for a complete Python implementation
+- Status: Successfully integrated and working
+
+This existing implementation serves as a reference for the authentication and API integration patterns. However, the current challenge lies in implementing the two endpoints mentioned above (Product Size Ask List and Bid List APIs), which require additional handling of authentication and request parameters.
+
+
+## Technical Requirements
+
+### Core Technologies
+- Node.js /Python
+- GraphQL
+- Experience with bot protection bypass techniques
+
+### Specific Tasks
+1. Implement a robust solution to bypass PerimeterX protection on StockX
+2. Create a reliable method to obtain and maintain valid authentication tokens
+3. Successfully fetch price data from StockX's GraphQL API endpoint
+4. Handle CAPTCHA challenges when they occur
+5. Implement proper browser fingerprinting and anti-detection measures
 
 ### Technical Details
 - Target URL: https://gateway.stockx.com/api/graphql
-- Required Headers:
+- Required Headers: (These can be found in the IOS or Andriod app. Not sure from where my developer has got these. Please check if you can find these from ios or android. If not, I can provide you with the credentials)
   - x-api-key
   - x-px-authorization
   - apollographql-client-name
@@ -111,6 +155,13 @@ The API should return data in the following structure for each variant ID:
 }
 ```
 
+### Current Challenges
+1. PerimeterX bot protection blocking requests
+2. Dynamic x-px-authorization token requirements
+3. Need for proper session management
+4. CAPTCHA handling
+5. Browser fingerprinting detection
+
 ### Deliverables
 1. Working Node.js script that can:
    - Successfully bypass PerimeterX protection
@@ -123,4 +174,37 @@ The API should return data in the following structure for each variant ID:
 4. Testing results showing successful API calls for all provided variant IDs
 5. A simple way to input and test new variant IDs
 
-[Rest of the job description remains the same...]
+### Required Skills
+- Strong experience with Puppeteer
+- Understanding of bot protection systems
+- Experience with GraphQL APIs
+- Knowledge of browser fingerprinting
+- Experience with CAPTCHA handling
+- Understanding of session management
+
+### Additional Information
+- The solution should be maintainable and well-documented
+- Code should include proper error handling
+- Solution should be scalable and reliable
+- Must work consistently without frequent failures
+- Should be more cost-effective than the commercial solution
+- Must be self-hostable
+- Should have proper documentation
+- Must be maintainable and scalable
+
+## Budget
+[You can specify your budget range here]
+
+## Timeline
+[Specify your expected timeline]
+
+## How to Apply
+Please provide:
+1. Relevant experience with similar projects
+2. Examples of previous work with bot protection bypass
+3. Your approach to solving this specific challenge
+4. Estimated timeline for completion
+5. Your rate/budget requirements
+
+## Note
+This project requires expertise in handling sophisticated bot protection systems. Please only apply if you have proven experience in this area.
